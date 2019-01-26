@@ -1,0 +1,72 @@
+@page {
+  size: 5.5in 8.5in;
+  margin: 20pt 40pt 20pt 40pt;
+}
+
+html {
+  font-family: "PingFang SC", "Hiragino Sans GB";
+  line-height: 1.4;
+  font-size: 8pt;
+}
+
+main {
+  display: block;
+  column-count: 2;
+  column-gap: 4em;
+  text-align: left;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1em;
+  margin-top: -2.2em;
+  font-weight: normal;
+}
+
+.line {
+  margin-bottom: 1.5em;
+}
+
+.translation {
+  font-size: 0.8em;
+  margin-top: -1.2em;
+  color: #111;
+}
+
+.content {
+  font-weight: bold;
+  margin-top: 0;
+}
+
+ruby {
+  display: inline-table;
+  text-align: center;
+  white-space: nowrap;
+  text-indent: 0;
+  table-baseline: 2;
+}
+
+ruby > rb, rbc, rtc {
+  display: table-row;
+}
+
+ruby > rt, rbc + rtc {
+  display: table-header-group;
+}
+
+rbc > rb, rtc > rt {
+  display: table-cell;
+  padding: 1px;
+}
+
+rt {
+  font-size: 0.5em;
+  line-height: 1.2em;
+}
+
+rp {
+  display:none;
+}

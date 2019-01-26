@@ -1,0 +1,14 @@
+{
+  "name": "jp-lyrics",
+  "version": "0.1.0",
+  "main": "index.js",
+  "author": "CJ Ting <fatelovely1128@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "0.18.0",
+    "cheerio": "1.0.0-rc.2",
+    "kuroshiro": "1.1.2",
+    "kuroshiro-analyzer-kuromoji": "1.1.0",
+    "yargs": "12.0.5"
+  }
+}
