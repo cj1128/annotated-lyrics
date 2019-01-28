@@ -1,0 +1,71 @@
+@page {
+  size: 5.5in 8.5in;
+  margin: 20pt 40pt 20pt 40pt;
+}
+
+html {
+  font-family: "PingFang SC", "Hiragino Sans GB";
+  line-height: 1.4;
+  font-size: 7.5pt;
+}
+
+main {
+  display: block;
+  column-count: 2;
+  column-gap: 4em;
+  text-align: left;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 2em;
+}
+
+header > p {
+  font-size: 0.8em;
+}
+
+.singer {
+  margin-top: -2.5em;
+}
+
+.lyricist {
+  margin-top: -0.5em;
+  margin-bottom: 2.5em;
+}
+
+.words {
+  margin-top: 0;
+  margin-bottom: 1em;
+  font-weight: bold;
+}
+
+ruby {
+  display: inline-table;
+  text-align: center;
+  white-space: nowrap;
+  text-indent: 0;
+  table-baseline: 2;
+}
+
+ruby > rb, rbc, rtc {
+  display: table-row;
+}
+
+ruby > rt, rbc + rtc {
+  display: table-header-group;
+}
+
+rbc > rb, rtc > rt {
+  display: table-cell;
+  padding: 1px;
+}
+
+rt {
+  font-size: 0.5em;
+  line-height: 1.2em;
+}
+
+rp {
+  display:none;
+}

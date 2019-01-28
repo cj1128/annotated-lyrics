@@ -24,6 +24,10 @@ const argv = yargs
       alias: "i",
       required: true,
     },
+    output: {
+      alias: "o",
+      describe: "output path, default to pdfs/[input-name].pdf",
+    },
     style: {
       alias: "s",
       describe: "css style file",
@@ -42,7 +46,7 @@ const argv = yargs
       break
 
     case "can":
-      await genJP(argv.style, argv.id)
+      await genCAN(argv.style, argv.id, argv.output)
       break
 
     default:
