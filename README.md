@@ -7,8 +7,8 @@
 
 ## 已生成 PDF
 
-- [ルージュ]: http://asset.cjting.cn/annotated-lyrics/ルージュ.pdf
-- [爱与痛的边缘]: http://asset.cjting.cn/annotated-lyrics/爱与痛的边缘.pdf
+- [ルージュ](http://asset.cjting.cn/annotated-lyrics/ルージュ.pdf)
+- [爱与痛的边缘](http://asset.cjting.cn/annotated-lyrics/爱与痛的边缘.pdf)
 
 ## 日语歌词生成
 
