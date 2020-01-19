@@ -1,4 +1,4 @@
-const fs = require("fs")
+const fs = require("fs-extra")
 const Kuroshiro = require("kuroshiro")
 const Analyzer = require("kuroshiro-analyzer-kuromoji")
 const { execSync } = require("child_process")
@@ -122,9 +122,14 @@ const genPDF = async (styleFile, inputPath, outputPath) => {
     outputPath = path.join("pdfs", path.basename(inputPath, ".txt") + ".pdf")
   }
 
+  // mkdirp
+  await fs.mkdirp(path.dirname(outputPath))
+
   execSync(`prince ${filePath} -s ${styleFile} -o ${outputPath}`, {
     timeout: 10 * 1000, // 10 seconds
   })
+
+  console.log(`Generate pdf at: ${ outputPath }`)
 }
 
 module.exports = genPDF

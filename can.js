@@ -1,5 +1,5 @@
 const axios = require("axios")
-const fs = require("fs")
+const fs = require("fs-extra")
 const cheerio = require("cheerio")
 const path = require("path")
 const { execSync } = require("child_process")
@@ -67,9 +67,14 @@ const genCAN = async (styleFile, id, outputPath) => {
     outputPath = path.join("pdfs", getTitle(res.data) + ".pdf")
   }
 
+  // mkdirp
+  await fs.mkdirp(path.dirname(outputPath))
+
   execSync(`prince ${filePath} -s ${styleFile} -o ${outputPath}`, {
     timeout: 10 * 1000, // 10 seconds
   })
+
+  console.log(`Generate pdf at: ${ outputPath }`)
 }
 
 module.exports = genCAN
