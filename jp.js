@@ -14,7 +14,8 @@ const kuroshiro = new Kuroshiro()
 //    translation: string?
 const parseLyric = str => {
   const result = {}
-  const lines = str.trim().split("\n")
+  // need to consider Windows!
+  const lines = str.trim().replace(/\r\n/g, "\n").split("\n")
 
   result.title = lines[0]
   result.singer = lines[1]
@@ -70,7 +71,7 @@ const processContent = async line => {
     `
   }
 
-  // 特别处理，目前 Kuroshiro 对 `渡鳥`的处理不对
+  // 特别处理，目前 Kuroshiro 对 `渡鳥` 的处理不对
   const w1 = "<ruby>渡<rp>(</rp><rt>わたりど</rt><rp>)</rp></ruby>り<ruby>鳥<rp>(</rp><rt></rt><rp>)</rp></ruby>"
   const s1 = "<ruby>渡<rp>(</rp><rt>わた</rt><rp>)</rp></ruby>り<ruby>鳥<rp>(</rp><rt>どり</rt><rp>)</rp></ruby>"
 
@@ -91,7 +92,6 @@ const genHTML = async lyric => {
   `
 
   for(let line of lyric.lines) {
-
     const processedContent = await processContent(line.content)
 
     result += `<div class="line"><p class="content">${processedContent}</p>`
